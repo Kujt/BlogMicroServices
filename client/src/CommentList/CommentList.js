@@ -3,7 +3,7 @@ import axios from "axios";
 const CommentList = ({ postId }) => {
   const [comments, setComments] = useState([]);
 
-  const fetchData = async () => {
+  const fetchComments = async () => {
     const res = await axios.get(
       `http://localhost:4001/posts/${postId}/comments`
     );
@@ -11,7 +11,8 @@ const CommentList = ({ postId }) => {
   };
 
   useEffect(() => {
-    fetchData();
+    fetchComments();
+    // eslint-disable-next-line
   }, []);
 
   const renderComments = comments.map((comment) => {
