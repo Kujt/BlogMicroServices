@@ -1,12 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
+const cors = require("cors");
 
 const app = express();
 
 // Express body-parser is an npm library used to process data sent through an HTTP request body
 app.use(bodyParser.json());
-
+app.use(cors());
 const posts = {};
 
 app.get("/posts", (req, res) => {
