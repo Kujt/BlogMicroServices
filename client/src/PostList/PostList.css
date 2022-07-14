@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.card-body {
+  width: 25rem;
+  margin: 1rem;
+  background-color: aliceblue;
+  padding: 2px 16px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
